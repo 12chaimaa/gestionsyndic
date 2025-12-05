@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace gestionsyndic.web.Models;
 
 public partial class Travaux
 {
+    [Key]
     public int Id { get; set; }
 
     public string? Description { get; set; }
@@ -24,4 +26,5 @@ public partial class Travaux
     public virtual Immeuble? IdImmeubleNavigation { get; set; }
 
     public virtual Paiement? IdPaiementNavigation { get; set; }
+   
 }

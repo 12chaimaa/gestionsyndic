@@ -1,31 +1,71 @@
-html {
-  font-size: 14px;
+/* Style général pour les tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+/* En-tête */
+thead {
+    background-color: #258cfb; /* cohérent avec ton focus */
+    color: #fff;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    thead th {
+        padding: 12px;
+        text-align: left;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: 2px solid #ddd;
+    }
+
+/* Corps */
+tbody tr {
+    border-bottom: 1px solid #ddd;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+    tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+tbody td {
+    padding: 12px;
+    color: #333;
 }
 
-body {
-  margin-bottom: 60px;
+/* Effet hover */
+tbody tr:hover {
+    background-color: #eaf4ff;
+    transition: background-color 0.3s ease;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* Responsive */
+.table-responsive {
+    overflow-x: auto;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+/* Table en mode sombre (si tu actives dark mode via Bootstrap) */
+@media (prefers-color-scheme: dark) {
+    table {
+        background-color: #1e1e1e;
+        color: #ddd;
+    }
+
+    thead {
+        background-color: #258cfb;
+        color: #fff;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #2a2a2a;
+    }
+
+    tbody tr:hover {
+        background-color: #333;
+    }
 }

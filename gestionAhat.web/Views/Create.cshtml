@@ -1,0 +1,41 @@
+﻿@using gestionsyndic.web.Models
+@model Utilisateur
+
+<h2>Ajouter un Utilisateur</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label>Nom</label>
+        <input asp-for="Nom" />
+    </div>
+
+    <div>
+        <label>Prénom</label>
+        <input asp-for="Prenom" />
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" type="email" />
+    </div>
+
+    <div>
+        <label>Mot de passe</label>
+        <input asp-for="MotDePasse" type="password" />
+    </div>
+
+    <div>
+        <label>Téléphone</label>
+        <input asp-for="Telephone" />
+    </div>
+
+    <div>
+        <label>Rôle</label>
+        <input asp-for="Role" />
+    </div>
+
+    <button type="submit">Ajouter</button>
+    <a href="/Utilisateur/Index">Annuler</a>
+
+</form>

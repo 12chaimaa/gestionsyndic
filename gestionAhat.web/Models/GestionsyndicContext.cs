@@ -13,6 +13,7 @@ public partial class GestionsyndicContext : DbContext
     {
     }
 
+
     public GestionsyndicContext(DbContextOptions<GestionsyndicContext> options, IConfiguration configuration)
         : base(options)
     {

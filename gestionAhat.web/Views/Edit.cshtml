@@ -1,0 +1,30 @@
+﻿@using gestionsyndic.web.Models
+@model Utilisateur
+
+<h2>Modifier un Utilisateur</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <label>Nom</label>
+    <input asp-for="Nom" />
+
+    <label>Prénom</label>
+    <input asp-for="Prenom" />
+
+    <label>Email</label>
+    <input asp-for="Email" type="email" />
+
+    <label>Mot de passe</label>
+    <input asp-for="MotDePasse" type="password" />
+
+    <label>Téléphone</label>
+    <input asp-for="Telephone" />
+
+    <label>Rôle</label>
+    <input asp-for="Role" />
+
+    <button type="submit">Enregistrer</button>
+    <a href="/Utilisateur/Index">Annuler</a>
+</form>

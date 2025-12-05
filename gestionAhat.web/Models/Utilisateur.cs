@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace gestionsyndic.web.Models;
 
 public partial class Utilisateur
 {
+    [Key]
     public int Id { get; set; }
 
     public string Nom { get; set; } = null!;
@@ -36,4 +38,9 @@ public partial class Utilisateur
     public virtual Syndic? Syndic { get; set; }
 
     public virtual Technicien? Technicien { get; set; }
+
+    internal static object FirstOrDefault(Func<object, bool> value)
+    {
+        throw new NotImplementedException();
+    }
 }

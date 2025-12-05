@@ -1,34 +1,35 @@
-
+using gestionsyndic.web.Models;
+using gestionsyndic.web.newfolder;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Ajouter les services au conteneur
 builder.Services.AddControllersWithViews();
 
-//builder.Services.AddDbContext<SchoolContext>(options =>
-//    options.UseSqlServer(builder.Configuration.GetConnectionString("SchoolContext")));
+// Ajouter le DbContext pour la base de données SQL Server
+builder.Services.AddDbContext<GestionsyndicContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configuration du pipeline HTTP
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    app.UseHsts(); // Active la sécurité HSTS en production
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles(); // Sert les fichiers CSS, JS, images, etc.
+
 app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
-
+// Configuration des routes par défaut
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

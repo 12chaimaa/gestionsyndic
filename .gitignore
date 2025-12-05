@@ -1,1 +1,13 @@
-﻿/.vs/gestionAhat.web/FileContentIndex/54ad9757-bf25-4595-b62d-804ac0958345.vsidx
+﻿
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build
+bin/
+obj/
+
+# Autres fichiers générés
+*.log
+*.cache

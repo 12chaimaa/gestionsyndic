@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gestionsyndic.web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0734ffbe70721e54f6b73d12dbb5ebfc65997b86")]
 [assembly: System.Reflection.AssemblyProductAttribute("gestionsyndic.web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gestionsyndic.web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

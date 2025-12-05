@@ -1,0 +1,14 @@
+﻿@using gestionsyndic.web.Models
+@model Utilisateur
+
+<h2>Supprimer l’utilisateur</h2>
+
+<p>Voulez-vous vraiment supprimer cet utilisateur ?</p>
+
+<p><strong>@Model.Nom @Model.Prenom</strong></p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit">Supprimer</button>
+    <a href="/Utilisateur/Index">Annuler</a>
+</form>

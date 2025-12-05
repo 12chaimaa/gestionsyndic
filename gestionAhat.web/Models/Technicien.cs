@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace gestionsyndic.web.Models;
 
 public partial class Technicien
 {
+    [Key]
     public int Id { get; set; }
 
     public string? Specialite { get; set; }

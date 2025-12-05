@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace gestionsyndic.web.Models;
 
-public partial class Personnel
+public  class Personnel
 {
+    [Key]
     public int Id { get; set; }
 
     public string? Specialite { get; set; }
@@ -13,5 +15,5 @@ public partial class Personnel
 
     public int? IdUtilisateur { get; set; }
 
-    public virtual Utilisateur? IdUtilisateurNavigation { get; set; }
+    public  Utilisateur? IdUtilisateurNavigation { get; set; }
 }

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace gestionsyndic.web.Models;
 
 public partial class Immeuble
 {
+    [Key]
     public int Id { get; set; }
 
     public string? Nom { get; set; }

@@ -7,6 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\Notification.cs" />
+    <Compile Remove="Views\Create.cs" />
+    <Compile Remove="Views\Create.cshtml.cs" />
+    <Compile Remove="Views\delete.cshtml.cs" />
+    <Compile Remove="Views\Detail.cshtml.cs" />
+    <Compile Remove="Views\Edit.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Create.cshtml" />
+    <Content Remove="Views\delete.cshtml" />
+    <Content Remove="Views\Detail.cshtml" />
+    <Content Remove="Views\Edit.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.10">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -16,6 +32,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
   </ItemGroup>
 
 </Project>
